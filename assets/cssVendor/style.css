@@ -1,0 +1,523 @@
+.contenido_div {
+    background-color: white !important;
+    border-radius: 18px;
+    height: 690px;
+    width: auto;
+    overflow: auto;
+}
+
+.contenido_div .margen_contenido {
+    background-color: transparent;
+    margin: 20px 25px 25px 25px;
+}
+
+.contenido_div .margen_contenido h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.contenido_div .margen_contenido h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido_div .margen_contenido .titulo_contenido {
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.box-spacing {
+    margin: 10px 10px 10px 10px;
+}
+
+.informacion_buscar{
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-content-info{
+  display: flex;
+  flex-direction: row;
+  background-color: #f2f0f3;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.row-content-6{
+  background-color: transparent;
+  margin: 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=============================================EMPIEZA MODAL========================================================================*/
+.modal-open {
+    overflow: hidden;
+  }
+  
+  .modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+  }
+
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+  }
+  
+  .modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .modal.fade .modal-dialog {
+      transition: none;
+    }
+  }
+  
+  .modal.show .modal-dialog {
+    transform: none;
+  }
+
+  .modal.modal-static .modal-dialog {
+    transform: scale(1.02);
+  }
+  
+  .modal-dialog-scrollable {
+    display: flex;
+    max-height: calc(100% - 1rem);
+  }
+  
+  .modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 1rem);
+    overflow: hidden;
+  }
+  
+  .modal-dialog-scrollable .modal-header,
+  .modal-dialog-scrollable .modal-footer {
+    flex-shrink: 0;
+  }
+  
+  .modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+  }
+
+  .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+  }
+  
+  .modal-dialog-centered::before {
+    display: block;
+    height: calc(100vh - 1rem);
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    content: "";
+  }
+  
+  .modal-dialog-centered.modal-dialog-scrollable {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .modal-dialog-centered.modal-dialog-scrollable .modal-content {
+    max-height: none;
+  }
+  
+  .modal-dialog-centered.modal-dialog-scrollable::before {
+    content: none;
+  }
+  
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+  }
+  
+  .modal-backdrop.fade {
+    opacity: 0;
+  }
+  
+  .modal-backdrop.show {
+    opacity: 0.5;
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #e3e6f0;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+    background-color: #7ac1ff;
+  }
+
+  .modal-header .close{
+    border-radius: 28px;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+  }
+
+  .modal-header .close:hover{
+    background-color: #ffffff;
+    border-color: #0b2a09;
+  }
+  
+  .modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+
+  .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    background-color: #ffffff;
+  }
+  
+  .modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #e3e6f0;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+    background-color: #7ac1ff;
+  }
+  
+  .modal-footer > * {
+    margin: 0.25rem;
+  }
+
+  .modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+  }
+
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 500px;
+      margin: 1.75rem auto;
+    }
+    .modal-dialog-scrollable {
+      max-height: calc(100% - 3.5rem);
+    }
+    .modal-dialog-scrollable .modal-content {
+      max-height: calc(100vh - 3.5rem);
+    }
+    .modal-dialog-centered {
+      min-height: calc(100% - 3.5rem);
+    }
+    .modal-dialog-centered::before {
+      height: calc(100vh - 3.5rem);
+      height: -webkit-min-content;
+      height: -moz-min-content;
+      height: min-content;
+    }
+    .modal-sm {
+      max-width: 300px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .modal-lg,
+    .modal-xl {
+      max-width: 800px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .modal-xl {
+      max-width: 1140px;
+    }
+  }
+
+  .fade {
+    transition: opacity 0.15s linear;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade {
+      transition: none;
+    }
+  }
+  
+  .fade:not(.show) {
+    opacity: 0;
+  }
+
+  .modal-titulo-contenido {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-group {
+    margin:3px;
+  }
+/*=============================================TERMINA MODAL========================================================================*/
+/*=============================================EMPIEZA CHECKBOX========================================================================*/
+.containerchk2 {
+  position: relative;
+  background: linear-gradient(90deg, #00aac1, #7ac1ff);
+  line-height: 0;
+  perspective: 400px;
+}
+
+.containerchk2 input[type="checkbox"],
+.containerchk2 label,
+.containerchk2 label::before,
+.containerchk2 label::after,
+.containerchk2 {
+appearance: none;
+display: inline-block;
+border-radius: 1rem;
+border: 0;
+transition: .35s ease-in-out;
+box-sizing: border-box;
+cursor: pointer;
+}
+
+.containerchk2 label {
+  width: 2.8rem;
+  height: 1.4rem;
+  background: #d7d7d7;
+  overflow: hidden;
+}
+
+.containerchk2 input[type="checkbox"] {
+  position: absolute;
+  z-index: 1;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: -0.09rem;
+  left: 0.0rem;
+  background: linear-gradient(45deg, #dedede, #ffffff);
+  box-shadow: 0 6px 7px rgba(0,0,0,0.3);
+  outline: none;
+}
+
+.containerchk2 input[type="checkbox"]:checked {
+  left: 1.1rem;
+}
+
+.containerchk2 input[type="checkbox"]:checked + label {
+  background: transparent;
+}
+
+.containerchk2 label::before,
+.containerchk2 label::after {
+position: absolute;
+overflow: hidden;
+left: .15rem;
+top: .5rem;
+height: 1rem;
+letter-spacing: -.04rem;
+color: #9b9b9b;
+font-family: "Times New Roman", serif;
+z-index: 2;
+font-size: .6rem;
+border-radius: 0;
+transform-origin: 0 0 -.5rem;
+backface-visibility: hidden;
+}
+
+.containerchk2 label::after {
+  top: .65rem;
+  left: .3rem;
+  height: .1rem;
+  width: .35rem;
+  font-size: .2rem;
+  transform-origin: 0 0 -.4rem;
+}
+
+.containerchk2 input[type="checkbox"]:checked + label::before,
+.containerchk2 input[type="checkbox"]:checked + label::after {
+left: 1.55rem;
+top: .4rem;
+line-height: .1rem;
+transform: rotateY(360deg);
+}
+
+.containerchk2 input[type="checkbox"]:checked + label::after {
+  height: .16rem;
+  top: .55rem;
+  left: 1.6rem;
+  font-size: .6rem;
+  line-height: 0;
+}
+/*=============================================TERMINA CHECKBOX========================================================================*/
+/*=============================================EMPIEZA BUTTON========================================================================*/
+.control_btn1 .content_btn1 button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  background: black;
+  padding: 1em 2.2em;
+  border: none;
+  border-radius: .6rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.control_btn1 .content_btn1 button span:not(:nth-child(6)) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  width: 40px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, #7ac1ff 0%,
+  #24dff8 50%, #00aac1 100%);
+  border-radius: 50%;
+  transition: .6s ease;
+}
+
+.control_btn1 .content_btn1 button span:nth-child(6) {
+  position: relative;
+}
+
+.control_btn1 .content_btn1 button span:nth-child(1) {
+  transform: translate(-3.3em, -5em);
+}
+
+.control_btn1 .content_btn1 button span:nth-child(2) {
+  transform: translate(-6em, 2.3em);
+}
+
+.control_btn1 .content_btn1 button span:nth-child(3) {
+  transform: translate(-.2em, 1.8em);
+}
+
+.control_btn1 .content_btn1 button span:nth-child(4) {
+  transform: translate(3.5em, 2.4em);
+}
+
+.control_btn1 .content_btn1 button span:nth-child(5) {
+  transform: translate(3.5em, -4.8em);
+}
+
+.control_btn1 .content_btn1 button:hover span:not(:nth-child(6)) {
+  transform: translate(-50%, -50%) scale(4);
+  transition: 1.5s ease;
+}
+/*=============================================TERMINA BUTTON========================================================================*/
+/*=============================================EMPIEZA BUTTON SM INPUT========================================================================*/
+.control_btn1_sm .content_btn1_sm button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  background: black;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: .6rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.control_btn1_sm .content_btn1_sm button span:not(:nth-child(6)) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  width: 40px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, #7ac1ff 0%,
+  #24dff8 50%, #00aac1 100%);
+  border-radius: 50%;
+  transition: .6s ease;
+}
+
+.control_btn1_sm .content_btn1_sm button span:nth-child(6) {
+  position: relative;
+}
+
+.control_btn1_sm .content_btn1_sm button span:nth-child(1) {
+  transform: translate(-3.3em, -5em);
+}
+
+.control_btn1_sm .content_btn1_sm button span:nth-child(2) {
+  transform: translate(-6em, 2.3em);
+}
+
+.control_btn1_sm .content_btn1_sm button span:nth-child(3) {
+  transform: translate(-.2em, 1.8em);
+}
+
+.control_btn1_sm .content_btn1_sm button span:nth-child(4) {
+  transform: translate(3.5em, 2.4em);
+}
+
+.control_btn1_sm .content_btn1_sm button span:nth-child(5) {
+  transform: translate(3.5em, -4.8em);
+}
+
+.control_btn1_sm .content_btn1_sm button:hover span:not(:nth-child(6)) {
+  transform: translate(-50%, -50%) scale(4);
+  transition: 1.5s ease;
+}
+/*=============================================TERMINA BUTTON SM INPUT========================================================================*/
