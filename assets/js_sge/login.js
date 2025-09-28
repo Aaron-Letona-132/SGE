@@ -20,11 +20,11 @@ function validarLogin() {
             cache:false,
             success: function(respuesta){
                 if(respuesta.trim() == "1"){
-                    window.location="/view/administracion/home.php";
+                    window.location="/SGE/view/administracion/home.php";
                 }else if(respuesta.trim() == "2"){
                     alertaError("Correo Invalido", "El correo o contraseño que ingreso son incorrectos");
                 }else{
-                    alertaError("Ha Ocurrido un Error", "Comuniquese con soporte Tecnico");
+                    alertaError("Ha Ocurrido un Error", "Comuniquese con soporte tecnico.");
                 }
             }
         });

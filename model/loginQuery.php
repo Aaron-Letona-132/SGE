@@ -12,7 +12,7 @@
                                         AND B.CORREO_PRA = ?
                                         AND A.STATUS_USR = 'SI'
                                         AND B.STATUS_PRA = 'SI'");
-        $stmt->bind_param("ss",$correo, $password);
+        $stmt->bind_param("ss", $password, $correo);
     
         $stmt->execute();
     

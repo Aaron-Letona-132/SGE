@@ -1,15 +1,13 @@
 <?php 
-    /*session_start();
+    session_start();
 
-    include("./librerias/conexion.php");
-    include("./query/sidebarQuery.php");
+    include("../../library/configuration/conexion.php");
 
     $conexion = conectarDB();
 
-    $usuario = $_SESSION['usuario'];
-    $session = $_SESSION['session'];
+    $correo = $_SESSION['correo'];
 
-    if($session == "SI"){*/
+    if($correo != ""){
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,13 +62,31 @@
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
                                 <i class='bx bxs-package nav__icon' ></i>
-                                <span class="nav__name">PRUEBA MAYOR</span>
+                                <span class="nav__name">CONFIGURACION</span>
                                 <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                             </a>
 
                             <div class="nav__dropdown-collapse">
                                 <div class="nav__dropdown-content">
-                                    <a href="#" class="nav__dropdown-item">Prueba</a>
+                                    <a href="../../view/administracion/usuario.php" class="nav__dropdown-item">Usuarios</a>
+                                    <a href="../../view/administracion/persona.php" class="nav__dropdown-item">Personas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav__items">
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class='bx bxs-package nav__icon' ></i>
+                                <span class="nav__name">CURSOS</span>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="../../view/academico/clase.php" class="nav__dropdown-item">Clases</a>
+                                    <a href="../../view/academico/horario.php" class="nav__dropdown-item">Horario</a>
                                 </div>
                             </div>
                         </div>
@@ -88,4 +104,4 @@
 
     <main>
         <section>
-<?php //}else{ header("Location: login.php"); } ?>
+<?php }else{ header("Location: ../../index.php"); } ?>
