@@ -10,7 +10,7 @@ function cerrarSession(){
     }).then((result) => {
         if (result.isConfirmed) {
             //window.location="cerrarSession.php";
-            window.location="../../index.php";
+            window.location="../../controller/cerrarSesion.php";
         }
     });
 }
