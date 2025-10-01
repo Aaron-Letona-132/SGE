@@ -10,99 +10,22 @@
                         <a><i class='bx bxs-user'></i>Mantenimiento Clases</a>
                     </div>
                     <!--AQUI VA EL TABLE Y LO DEMAS-->
-                    <!--<div id="divListadoUsuarios"></div>-->
-
-                    <div class="content">
-                        <div class="container">
-                            <div class="page-title">
-                                <h3>Clases
-                                    <!--<a href="roles.php" class="btn btn-sm btn-outline-primary float-end"><i class='bx bx-briefcase'></i> Roles</a>-->
-                                    <a href="./grado.php" class="btn btn-sm btn-outline-primary float-end"><i class='bx bx-briefcase'></i> Grado</a>
-                                    <a onclick="abrirModal('null', '', '', '', '', '', '')" class="btn btn-sm btn-outline-primary float-end" style="margin-right: 10px;"><i class='bx bx-plus-circle'></i> Agregar</a>
-                                </h3>
-                            </div>
-                            <div class="box box-primary">
-                                <div class="box-body">
-                                    <div class="box-spacing">
-                                        <table width="100%" class="table table-hover" id="dataTables-example">
-                                            <thead>
-                                                <tr>
-                                                    <th>Grado</th>
-                                                    <th>Nombre</th>
-                                                    <th>Opciones</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1ro Basico</td>
-                                                    <td>Ciencias Sociales</td>
-                                                    <td class="text-end">
-                                                        <a onclick="abrirModal('<?php echo base64_encode($id);?>', '<?php echo base64_encode($idPra);?>')" class="btn btn-outline-info btn-rounded"><i class='bx bxs-edit'></i></a>
-                                                        <a onclick="eliminar('<?php echo base64_encode($id);?>')" class="btn btn-outline-danger btn-rounded"><i class='bx bxs-trash' ></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1ro Basico</td>
-                                                    <td>Expresion artistica</td>
-                                                    <td class="text-end">
-                                                        <a onclick="abrirModal('<?php echo base64_encode($id);?>', '<?php echo base64_encode($idPra);?>')" class="btn btn-outline-info btn-rounded"><i class='bx bxs-edit'></i></a>
-                                                        <a onclick="eliminar('<?php echo base64_encode($id);?>')" class="btn btn-outline-danger btn-rounded"><i class='bx bxs-trash' ></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1ro Basico</td>
-                                                    <td>Ciencias Naturales</td>
-                                                    <td class="text-end">
-                                                        <a onclick="abrirModal('<?php echo base64_encode($id);?>', '<?php echo base64_encode($idPra);?>')" class="btn btn-outline-info btn-rounded"><i class='bx bxs-edit'></i></a>
-                                                        <a onclick="eliminar('<?php echo base64_encode($id);?>')" class="btn btn-outline-danger btn-rounded"><i class='bx bxs-trash' ></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1ro Basico</td>
-                                                    <td>Fisica Fundamental</td>
-                                                    <td class="text-end">
-                                                        <a onclick="abrirModal('<?php echo base64_encode($id);?>', '<?php echo base64_encode($idPra);?>')" class="btn btn-outline-info btn-rounded"><i class='bx bxs-edit'></i></a>
-                                                        <a onclick="eliminar('<?php echo base64_encode($id);?>')" class="btn btn-outline-danger btn-rounded"><i class='bx bxs-trash' ></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2do Basico</td>
-                                                    <td>Matematica</td>
-                                                    <td class="text-end">
-                                                        <a onclick="abrirModal('<?php echo base64_encode($id);?>', '<?php echo base64_encode($idPra);?>')" class="btn btn-outline-info btn-rounded"><i class='bx bxs-edit'></i></a>
-                                                        <a onclick="eliminar('<?php echo base64_encode($id);?>')" class="btn btn-outline-danger btn-rounded"><i class='bx bxs-trash' ></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1ro Basico</td>
-                                                    <td>Quimica</td>
-                                                    <td class="text-end">
-                                                        <a onclick="abrirModal('<?php echo base64_encode($id);?>', '<?php echo base64_encode($idPra);?>')" class="btn btn-outline-info btn-rounded"><i class='bx bxs-edit'></i></a>
-                                                        <a onclick="eliminar('<?php echo base64_encode($id);?>')" class="btn btn-outline-danger btn-rounded"><i class='bx bxs-trash' ></i></a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="divListadoClases"></div>
 
                 </div>
             </div>
         </section>
     </main>
 
-    <?php //include ("../../modal/subUsuarioModal.php")?>
+    <?php include ("../../modal/claseModal.php")?>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!--<script src="../../assets/js_sge/usuario.js"></script>
+    <script src="../../assets/js_sge/clase.js"></script>
     <script>
         $(document).ready(function(){
-            cargarListadoUsuarios();
+            cargarListado();
         });
-    </script>-->
+    </script>
 
 <?php 
     require_once("../../library/widgets/footer.php");
